@@ -1,0 +1,27 @@
+function fillSelectMachine() {
+    var selectList = document.getElementById("select-machine");
+    selectList.innerHTML = "";
+    listMachinery.forEach(element => {
+        selectList.innerHTML += `<option value='${element.code}'> ${element.machine}</option>`
+    });
+}
+---
+---------
+function fillTable() {
+    document.getElementById("tbody-rental").innerHTML = "";
+    listRent.forEach(element => {
+        document.getElementById("tbody-rental").innerHTML +=
+            `<tr>
+                <td>${element.customer}</td>
+                <td>${element.machinary}</td>
+                <td>${element.dateIn}</td>
+                <td>${element.dateOut}</td>
+                <td>${element.days}</td> 
+                <td>${element.amount}</td>
+                <td>${element.discount}</td>
+                <td>${element.warranty}</td>
+                <td>${element.totalPay}</td>
+            </tr>`
+    });
+
+}
